@@ -1,15 +1,27 @@
 import styled from "styled-components";
 import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/pages/Routes.tsx";
+import mainImg from "./assets/images/main01.jpg";
+import AIImg from './assets/images/ai.png';
 
+export interface AIItem {
+  initialImage: string,
+  AIImage: string,
+  name: string,
+  id: number
+}
 
 function App() {
+  const items: AIItem[] = [
+    {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 0},
+    {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 1},
+  ]
 
 
   return <BrowserRouter>
     <Container>
       <PhoneContainer>
-        <Routes />
+        <Routes items={items}/>
       </PhoneContainer>
   </Container>
   </BrowserRouter>

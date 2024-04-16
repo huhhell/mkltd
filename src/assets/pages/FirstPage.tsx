@@ -1,25 +1,19 @@
 import styled from "styled-components";
 import Header from "../components /Header/Header.tsx";
-import mainImg from '../images/main01.jpg';
 import ImageItem from "../components /ImageItem/ImageItem.tsx";
+import {AIItem} from "../../App.tsx";
 
-interface AIItem {
-    image: string,
-    name: string,
-    id: number
+
+interface Props {
+    items: AIItem[];
 }
-
 // todo fix view when elem is one
-export default function FirstPage() {
-    const elements: AIItem[] = [
-        {image: mainImg, name: 'Lego', id: 0},
-        {image: mainImg, name: 'Lego', id: 1},
-    ]
+export default function FirstPage({items}: Props) {
 
     return <Container>
         <Header isSignIn={false}/>
         <List>
-            {elements.map(i => <ImageItem image={i.image} name={i.name} key={i.id} />)}
+            {items.map(i => <ImageItem image={i.initialImage} name={i.name} key={i.id} />)}
         </List>
         <Footer>
             <Mail href='mailto:support@avgen.me'>Get help at support@avgen.me</Mail>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 
 interface Props {
@@ -9,12 +10,13 @@ interface Props {
 export default function ImageItem({image, name}: Props) {
 
 
-    return <Container>
+    return <Link to='/item'> <Container>
         <ImageContainer>
             <Image src={image} />
         </ImageContainer>
         <Name>{name}</Name>
     </Container>
+    </Link>
 }
 
 const Container = styled.li`
