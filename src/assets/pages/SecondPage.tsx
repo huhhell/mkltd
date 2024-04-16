@@ -21,13 +21,15 @@ export default function SecondPage({item}: Props) {
         </Link>
         <ImageCnt>
             <InitialImage src={item.initialImage}/>
-            <AIImage src={item.AIImage} />
+            <AIImage src={item.AIImage}/>
         </ImageCnt>
         <ChooseOptions>
+            <Link to='/save'>
             <ChooseOptionsItem>
                 <ChooseOptionIcon src={galleryImg}/>
-                <ChooseOptionText>Choose photo from gallery</ChooseOptionText>
-            </ChooseOptionsItem>
+                    <ChooseOptionText>Choose photo from gallery</ChooseOptionText>
+                </ChooseOptionsItem>
+            </Link>
             <ChooseOptionsItem>
                 <ChooseOptionIcon src={cameraImg}/>
                 <ChooseOptionText>Take photo with camera</ChooseOptionText>

@@ -3,6 +3,7 @@ import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/pages/Routes.tsx";
 import mainImg from "./assets/images/main01.jpg";
 import AIImg from './assets/images/ai.png';
+import {useState} from "react";
 
 export interface AIItem {
   initialImage: string,
@@ -12,6 +13,7 @@ export interface AIItem {
 }
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
   const items: AIItem[] = [
     {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 0},
     {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 1},
@@ -21,7 +23,7 @@ function App() {
   return <BrowserRouter>
     <Container>
       <PhoneContainer>
-        <Routes items={items}/>
+        <Routes items={items} isLogin={isLogin}/>
       </PhoneContainer>
   </Container>
   </BrowserRouter>
