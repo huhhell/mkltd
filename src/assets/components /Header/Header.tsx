@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 
 interface Props {
-    isSignIn: boolean
+    isLogin: boolean
 }
-export default function Header({isSignIn}: Props) {
+export default function Header({isLogin}: Props) {
 
     return <Container>
         <Logo>OneAI</Logo>
-        {!isSignIn && <SignInButton>Sign in</SignInButton>}
+        {!isLogin && <SignInButton>Sign in</SignInButton>}
     </Container>
 }
 

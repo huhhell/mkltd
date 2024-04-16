@@ -6,12 +6,13 @@ import {AIItem} from "../../App.tsx";
 
 interface Props {
     items: AIItem[];
+    isLogin: boolean;
 }
 // todo fix view when elem is one
-export default function FirstPage({items}: Props) {
+export default function FirstPage({items, isLogin}: Props) {
 
     return <Container>
-        <Header isSignIn={false}/>
+        <Header isLogin={isLogin}/>
         <List>
             {items.map(i => <ImageItem image={i.initialImage} name={i.name} key={i.id} />)}
         </List>
