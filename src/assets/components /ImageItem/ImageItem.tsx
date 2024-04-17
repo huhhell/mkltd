@@ -20,7 +20,7 @@ export default function ImageItem({image, name}: Props) {
 }
 
 const Container = styled.li`
-    background: transparent linear-gradient(140deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(140deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0 0 no-repeat padding-box;
     box-shadow: inset 3px 3px 6px #EEE5E9;
     padding: 14px;
     border-radius: 30px;

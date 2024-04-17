@@ -110,7 +110,7 @@ const ChooseOptions = styled.div`
 const ChooseOptionsItem = styled.div`
     flex: 0 0 45%;
     padding: 20px 10px;
-    background: transparent linear-gradient(135deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(135deg, #FFF7FC66 0%, #FFFFFF66 0%, #FFFFFF00 100%) 0 0 no-repeat padding-box;
     box-shadow: inset 3px 3px 6px #EEE5E9;
     border-radius: 20px;
     backdrop-filter: blur(20px);
