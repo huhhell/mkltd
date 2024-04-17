@@ -40,15 +40,28 @@ const Container = styled.div`
     max-width: 1400px;
     margin: 0 auto;
   padding: 40px;
+  
+  @media(max-width: 500px) {
+    padding: 0;
+  }
 `
 
 const PhoneContainer = styled.main`
-  width: 390px;
-  height: 844px;
-  margin: 0 auto;
-  border: 5px solid #757575;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  overflow: auto;
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    border: 5px solid #757575;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    overflow: auto;
+
+    @media (max-width: 500px) {
+        border: unset;
+        width: 100vw;
+        height: 100vh;
+        -webkit-border-radius: unset;
+        -moz-border-radius: unset;
+        border-radius: unset;
+    }
 `
