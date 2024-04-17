@@ -14,6 +14,7 @@ export interface AIItem {
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+
   const items: AIItem[] = [
     {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 0},
     {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 1},
@@ -22,8 +23,6 @@ function App() {
   const handleLogin = () => {
     setIsLogin(true);
   }
-
-  console.log(isLogin)
 
 
   return <BrowserRouter>

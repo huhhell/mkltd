@@ -8,7 +8,6 @@ interface Props {
     items: AIItem[];
     isLogin: boolean;
 }
-// todo fix view when elem is one
 export default function FirstPage({items, isLogin}: Props) {
 
     return <Container>
@@ -26,6 +25,10 @@ export default function FirstPage({items, isLogin}: Props) {
 const Container = styled.div`
     background: transparent linear-gradient(180deg, #6600FF 0%, #00CC99 100%) 0 0 no-repeat padding-box;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 `
 
 const List = styled.ul`
