@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 
 interface Props {
@@ -8,7 +9,9 @@ export default function Header({isLogin}: Props) {
 
     return <Container>
         <Logo>OneAI</Logo>
-        {!isLogin && <SignInButton>Sign in</SignInButton>}
+        {!isLogin && <Link to='/login'>
+            <SignInButton>Sign in</SignInButton>
+        </Link>}
     </Container>
 }
 

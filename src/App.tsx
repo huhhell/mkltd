@@ -19,11 +19,17 @@ function App() {
     {initialImage: mainImg, AIImage: AIImg, name: 'Lego', id: 1},
   ]
 
+  const handleLogin = () => {
+    setIsLogin(true);
+  }
+
+  console.log(isLogin)
+
 
   return <BrowserRouter>
     <Container>
       <PhoneContainer>
-        <Routes items={items} isLogin={isLogin}/>
+        <Routes items={items} isLogin={isLogin} handleLogin={handleLogin}/>
       </PhoneContainer>
   </Container>
   </BrowserRouter>
